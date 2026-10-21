@@ -1,0 +1,191 @@
+<!-- register.html -->
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Регистрация нового пользователя в онлайн-кинотеатре CineScope.">
+    <title>Регистрация — CineScope</title>
+
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="../styles/login.css">
+
+    <script src="../scripts/validation.js" defer></script>
+</head>
+
+<body class="page">
+    <header class="header">
+        <div class="header__container">
+            <a class="header__logo" href="../../index.html" aria-label="CineScope — главная">
+                <span class="header__logo-main">Cine</span><span class="header__logo-accent">Scope</span>
+            </a>
+
+            <nav class="header__nav" aria-label="Основная навигация">
+                <ul class="header__list">
+                    <li class="header__item">
+                        <a class="header__link" href="../../index.html">
+                            Главная
+                        </a>
+                    </li>
+
+                    <li class="header__item">
+                        <a class="header__link" href="./catalog.html">
+                            Каталог
+                        </a>
+                    </li>
+
+                    <li class="header__item">
+                        <a class="header__link header__link--active" href="./register.html">
+                            Регистрация
+                        </a>
+                    </li>
+
+                    <li class="header__item">
+                        <a class="header__link" href="./login.html">
+                            Вход
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="forms-page">
+        <section class="forms-section" aria-labelledby="register-title">
+            <div class="forms-section__container">
+                <div class="forms-section__intro">
+                    <p class="forms-section__eyebrow">CineScope</p>
+
+                    <h1 class="forms-section__title" id="register-title">
+                        Создайте аккаунт
+                    </h1>
+
+                    <p class="forms-section__description">
+                        Зарегистрируйтесь, чтобы пользоваться возможностями CineScope
+                        и сохранять удобный доступ к онлайн-кинотеатру.
+                    </p>
+                </div>
+
+                <form class="form form--register" id="register-form" novalidate>
+                    <fieldset class="form__fieldset">
+                        <legend class="form__legend">
+                            Данные пользователя
+                        </legend>
+
+                        <div class="form__group">
+                            <label class="form__label" for="full-name">
+                                ФИО
+                            </label>
+
+                            <input class="form__input" type="text" id="full-name" name="fullName" autocomplete="name"
+                                placeholder="Иванов Иван Иванович" required>
+
+                            <span class="form__error" id="full-name-error" aria-live="polite"></span>
+                        </div>
+
+                        <div class="form__group">
+                            <label class="form__label" for="register-email">
+                                Email
+                            </label>
+
+                            <input class="form__input" type="email" id="register-email" name="email"
+                                autocomplete="email" placeholder="example@mail.ru" required>
+
+                            <span class="form__error" id="register-email-error" aria-live="polite"></span>
+                        </div>
+
+                        <div class="form__group">
+                            <label class="form__label" for="register-login">
+                                Логин
+                            </label>
+
+                            <input class="form__input" type="text" id="register-login" name="login"
+                                autocomplete="username" minlength="4" placeholder="Ваш логин" required>
+
+                            <span class="form__error" id="register-login-error" aria-live="polite"></span>
+                        </div>
+
+                        <div class="form__group">
+                            <label class="form__label" for="register-password">
+                                Пароль
+                            </label>
+
+                            <div class="form__password">
+                                <input class="form__input form__input--password" type="password" id="register-password"
+                                    name="password" autocomplete="new-password" minlength="8"
+                                    placeholder="Не менее 8 символов" required>
+
+                                <button class="form__password-toggle" type="button" data-password-toggle
+                                    data-target="register-password">
+                                    Показать
+                                </button>
+                            </div>
+
+                            <span class="form__error" id="register-password-error" aria-live="polite"></span>
+                        </div>
+
+                        <div class="form__group">
+                            <label class="form__label" for="register-password-confirm">
+                                Повтор пароля
+                            </label>
+
+                            <div class="form__password">
+                                <input class="form__input form__input--password" type="password"
+                                    id="register-password-confirm" name="passwordConfirm" autocomplete="new-password"
+                                    placeholder="Повторите пароль" required>
+
+                                <button class="form__password-toggle" type="button" data-password-toggle
+                                    data-target="register-password-confirm">
+                                    Показать
+                                </button>
+                            </div>
+
+                            <span class="form__error" id="register-password-confirm-error" aria-live="polite"></span>
+                        </div>
+
+                        <div class="form__checkbox-group">
+                            <input class="form__checkbox" type="checkbox" id="register-agreement" name="agreement">
+
+                            <label class="form__checkbox-label" for="register-agreement">
+                                Я согласен с правилами использования сервиса и обработкой данных.
+                            </label>
+
+                            <span class="form__error form__error--checkbox" id="register-agreement-error"
+                                aria-live="polite"></span>
+                        </div>
+                    </fieldset>
+
+                    <button class="form__submit button" type="submit">
+                        Зарегистрироваться
+                    </button>
+
+                    <p class="form__success" id="register-success" aria-live="polite" hidden>
+                        Регистрация прошла успешно!
+                    </p>
+
+                    <p class="form__footer-text">
+                        Уже есть аккаунт?
+                        <a class="form__link" href="./login.html">
+                            Войти
+                        </a>
+                    </p>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer__container">
+            <p class="footer__copyright">
+                © 2026 CineScope. Все права защищены.
+            </p>
+
+            <p class="footer__text">
+                Онлайн-кинотеатр для любителей хорошего кино.
+            </p>
+        </div>
+    </footer>
+</body>
+
+</html>

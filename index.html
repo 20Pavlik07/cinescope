@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="CineScope — онлайн-кинотеатр с подборкой фильмов на любой вкус."
+    />
+    <title>CineScope — онлайн-кинотеатр</title>
+    <link rel="stylesheet" href="./static/styles/style.css" />
+  </head>
+
+  <body class="page">
+    <header class="header">
+      <div class="header__container">
+        <a
+          class="header__logo"
+          href="index.html"
+          aria-label="CineScope — главная"
+        >
+          <span class="header__logo-main">Cine</span
+          ><span class="header__logo-accent">Scope</span>
+        </a>
+
+        <nav class="header__nav" aria-label="Основная навигация">
+          <ul class="header__list">
+            <li class="header__item">
+              <a class="header__link header__link--active" href="index.html">
+                Главная
+              </a>
+            </li>
+            <li class="header__item">
+              <a class="header__link" href="./static/assets/catalog.html">
+                Каталог
+              </a>
+            </li>
+            <li class="header__item">
+              <a class="header__link" href="./static/assets/register.html">
+                Регистрация
+              </a>
+            </li>
+            <li class="header__item">
+              <a class="header__link" href="./static/assets/login.html">
+                Вход
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="main">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero__container">
+          <div class="hero__content">
+            <p class="hero__eyebrow">Онлайн-кинотеатр</p>
+
+            <h1 class="hero__title" id="hero-title">
+              Смотрите кино вместе с CineScope
+            </h1>
+
+            <p class="hero__slogan">
+              Хорошее кино начинается с правильного выбора.
+            </p>
+
+            <p class="hero__description">
+              CineScope собирает фильмы разных жанров в одном удобном каталоге.
+              Находите интересные истории, изучайте рейтинги и выбирайте, что
+              посмотреть сегодня.
+            </p>
+
+            <a class="hero__button button" href="./static/assets/catalog.html">
+              Перейти в каталог
+            </a>
+          </div>
+
+          <div class="hero__visual" aria-hidden="true">
+            <div class="hero__screen">
+              <span class="hero__screen-label">CineScope</span>
+              <span class="hero__screen-text"
+                >Ваш следующий фильм уже здесь</span
+              >
+            </div>
+            <div class="hero__ticket">
+              <span class="hero__ticket-circle hero__ticket-circle--top"></span>
+              <span
+                class="hero__ticket-circle hero__ticket-circle--bottom"
+              ></span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="advantages" aria-labelledby="advantages-title">
+        <div class="section__container">
+          <div class="section__heading">
+            <p class="section__eyebrow">Почему CineScope</p>
+            <h2 class="section__title" id="advantages-title">
+              Всё для комфортного просмотра
+            </h2>
+          </div>
+
+          <div class="advantages__grid">
+            <article class="advantage">
+              <div class="advantage__icon" aria-hidden="true">🎬</div>
+              <div class="advantage__content">
+                <h3 class="advantage__title">Разнообразный каталог</h3>
+                <p class="advantage__text">
+                  Собрали фильмы разных жанров, чтобы каждый смог найти историю
+                  по своему настроению.
+                </p>
+              </div>
+            </article>
+
+            <article class="advantage">
+              <div class="advantage__icon" aria-hidden="true">⭐</div>
+              <div class="advantage__content">
+                <h3 class="advantage__title">Рейтинги и информация</h3>
+                <p class="advantage__text">
+                  Смотрите год выхода, жанр и рейтинг фильма перед тем, как
+                  сделать свой выбор.
+                </p>
+              </div>
+            </article>
+
+            <article class="advantage">
+              <div class="advantage__icon" aria-hidden="true">🔎</div>
+              <div class="advantage__content">
+                <h3 class="advantage__title">Удобный поиск</h3>
+                <p class="advantage__text">
+                  Быстро находите нужный фильм с помощью поиска и фильтрации по
+                  жанрам.
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="movies" aria-labelledby="movies-title">
+        <div class="section__container">
+          <div class="section__heading section__heading--row">
+            <div>
+              <p class="section__eyebrow">Избранное</p>
+              <h2 class="section__title" id="movies-title">
+                Фильмы, которые стоит посмотреть
+              </h2>
+            </div>
+
+            <a class="section__link" href="./static/assets/catalog.html">
+              Весь каталог
+              <span aria-hidden="true">→</span>
+            </a>
+          </div>
+
+          <div class="movies__grid">
+            <article class="movie-card">
+              <div class="movie-card__poster movie-card__poster--future">
+                <span class="movie-card__poster-label">CineScope</span>
+                <span class="movie-card__poster-title">Неоновый горизонт</span>
+              </div>
+
+              <div class="movie-card__body">
+                <p class="movie-card__genre">Фантастика</p>
+                <h3 class="movie-card__title">Неоновый горизонт</h3>
+
+                <div class="movie-card__meta">
+                  <span class="movie-card__year">2024</span>
+                  <span class="movie-card__rating">★ 8.7</span>
+                </div>
+
+                <a class="movie-card__link" href="./static/assets/catalog.html"> Подробнее </a>
+              </div>
+            </article>
+
+            <article class="movie-card">
+              <div class="movie-card__poster movie-card__poster--detective">
+                <span class="movie-card__poster-label">CineScope</span>
+                <span class="movie-card__poster-title"
+                  >Последний свидетель</span
+                >
+              </div>
+
+              <div class="movie-card__body">
+                <p class="movie-card__genre">Детектив</p>
+                <h3 class="movie-card__title">Последний свидетель</h3>
+
+                <div class="movie-card__meta">
+                  <span class="movie-card__year">2023</span>
+                  <span class="movie-card__rating">★ 8.4</span>
+                </div>
+
+                <a class="movie-card__link" href="./static/assets/catalog.html"> Подробнее </a>
+              </div>
+            </article>
+
+            <article class="movie-card">
+              <div class="movie-card__poster movie-card__poster--drama">
+                <span class="movie-card__poster-label">CineScope</span>
+                <span class="movie-card__poster-title">За пределами слов</span>
+              </div>
+
+              <div class="movie-card__body">
+                <p class="movie-card__genre">Драма</p>
+                <h3 class="movie-card__title">За пределами слов</h3>
+
+                <div class="movie-card__meta">
+                  <span class="movie-card__year">2022</span>
+                  <span class="movie-card__rating">★ 8.9</span>
+                </div>
+
+                <a class="movie-card__link" href="./static/assets/catalog.html"> Подробнее </a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer__container">
+        <p class="footer__copyright">© 2026 CineScope. Все права защищены.</p>
+
+        <p class="footer__text">
+          Онлайн-кинотеатр для любителей хорошего кино.
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,166 @@
+<!-- catalog.html -->
+<!doctype html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Каталог фильмов CineScope — поиск и фильтрация фильмов по названию и жанру." />
+    <title>Каталог — CineScope</title>
+
+    <link rel="stylesheet" href="../styles/style.css" />
+    <link rel="stylesheet" href="../styles/catalog.css" />
+
+    <script src="../scripts/catalog.js" defer></script>
+</head>
+
+<body class="page">
+    <header class="header">
+        <div class="header__container">
+            <a class="header__logo" href="../../index.html" aria-label="CineScope — главная">
+                <span class="header__logo-main">Cine</span><span class="header__logo-accent">Scope</span>
+            </a>
+
+            <nav class="header__nav" aria-label="Основная навигация">
+                <ul class="header__list">
+                    <li class="header__item">
+                        <a class="header__link" href="../../index.html"> Главная </a>
+                    </li>
+
+                    <li class="header__item">
+                        <a class="header__link header__link--active" href="./catalog.html">
+                            Каталог
+                        </a>
+                    </li>
+
+                    <li class="header__item">
+                        <a class="header__link" href="./register.html"> Регистрация </a>
+                    </li>
+
+                    <li class="header__item">
+                        <a class="header__link" href="./login.html"> Вход </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="catalog">
+        <section class="catalog__hero" aria-labelledby="catalog-title">
+            <div class="catalog__container">
+                <p class="catalog__eyebrow">CineScope</p>
+
+                <h1 class="catalog__title" id="catalog-title">Каталог фильмов</h1>
+
+                <p class="catalog__description">
+                    Найдите фильм по названию или выберите подходящий жанр. Откройте
+                    подробную информацию о заинтересовавшей вас картине.
+                </p>
+            </div>
+        </section>
+
+        <section class="catalog__content" aria-labelledby="catalog-title">
+            <div class="catalog__container">
+                <form class="catalog-filters" id="catalog-filters">
+                    <div class="catalog-filters__field">
+                        <label class="catalog-filters__label" for="movie-search">
+                            Поиск по названию
+                        </label>
+
+                        <input class="catalog-filters__input" type="search" id="movie-search" name="movie-search"
+                            placeholder="Например, Неоновый горизонт" autocomplete="off" />
+                    </div>
+
+                    <div class="catalog-filters__field">
+                        <label class="catalog-filters__label" for="genre-filter">
+                            Жанр
+                        </label>
+
+                        <select class="catalog-filters__select" id="genre-filter" name="genre-filter">
+                            <option value="all">Все жанры</option>
+                            <option value="Фантастика">Фантастика</option>
+                            <option value="Детектив">Детектив</option>
+                            <option value="Драма">Драма</option>
+                            <option value="Триллер">Триллер</option>
+                            <option value="Романтика">Романтика</option>
+                            <option value="Боевик">Боевик</option>
+                        </select>
+                    </div>
+                </form>
+
+                <div class="catalog__topline">
+                    <p class="catalog__counter" id="movie-counter" aria-live="polite">
+                        Найдено фильмов: 6
+                    </p>
+                </div>
+
+                <div class="catalog-grid" id="catalog-grid" aria-live="polite"></div>
+
+                <p class="catalog-empty" id="catalog-empty" hidden>
+                    Ничего не найдено
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <div class="modal" id="movie-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" hidden>
+        <div class="modal__overlay" data-modal-close></div>
+
+        <div class="modal__dialog">
+            <button class="modal__close" id="modal-close" type="button" aria-label="Закрыть окно">
+                ×
+            </button>
+
+            <div class="modal__poster" id="modal-poster">
+                <span class="modal__poster-label">CineScope</span>
+                <span class="modal__poster-title" id="modal-poster-title"></span>
+            </div>
+
+            <div class="modal__content">
+                <p class="modal__genre" id="modal-genre"></p>
+
+                <h2 class="modal__title" id="modal-title"></h2>
+
+                <div class="modal__meta">
+                    <span id="modal-year"></span>
+                    <span class="modal__rating" id="modal-rating"></span>
+                </div>
+
+                <p class="modal__description" id="modal-description"></p>
+
+                <div class="modal__info">
+                    <div class="modal__info-item">
+                        <span class="modal__info-label">Режиссёр</span>
+                        <span class="modal__info-value" id="modal-director"></span>
+                    </div>
+
+                    <div class="modal__info-item">
+                        <span class="modal__info-label">Возраст</span>
+                        <span class="modal__info-value" id="modal-age"></span>
+                    </div>
+
+                    <div class="modal__info-item">
+                        <span class="modal__info-label">Продолжительность</span>
+                        <span class="modal__info-value" id="modal-duration"></span>
+                    </div>
+                </div>
+
+                <button class="modal__button button" id="modal-action" type="button">
+                    Закрыть
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer__container">
+            <p class="footer__copyright">© 2026 CineScope. Все права защищены.</p>
+
+            <p class="footer__text">
+                Онлайн-кинотеатр для любителей хорошего кино.
+            </p>
+        </div>
+    </footer>
+</body>
+
+</html>
